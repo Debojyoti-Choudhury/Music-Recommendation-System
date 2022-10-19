@@ -66,6 +66,8 @@ model_type = st.sidebar.radio(
 
 df = pd.read_csv("./output/model_output.csv", index_col=0)
 
+st.metric(label="Temperature", value="70 °F", delta="1.2 °F")
+
 col1, col2, col3, col4, col5 = st.columns(5)
 col1.metric("Precision", str(df.loc[model, "Precision"]))
 col2.metric("Recall", str(df.loc[model, "Recall"]))
