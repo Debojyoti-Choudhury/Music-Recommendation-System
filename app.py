@@ -67,8 +67,8 @@ model_type = st.sidebar.radio(
 df = pd.read_csv("./output/model_output.csv", index_col=0)
 
 col1, col2, col3, col4, col5 = st.columns(5)
-col1.metric("Precision", df.loc[model, "Precision"])
-col2.metric("Recall", df.loc[model, "Recall"])
-col3.metric("F1 score", df.loc[model, "f1score"])
-col4.metric("Accuracy", df.loc[model, "accuracy"])
-col5.metric("AUC ROC", df.loc[model, "AUC_ROC"])
+col1.metric("Precision", str(df.loc[model, "Precision"]))
+col2.metric("Recall", str(df.loc[model, "Recall"]))
+col3.metric("F1 score", str(df.loc[model, "f1score"]))
+col4.metric("Accuracy", str(df.loc[model, "accuracy"]))
+col5.metric("AUC ROC", str(df.loc[model, "AUC_ROC"]))
